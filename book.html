@@ -1,0 +1,95 @@
+<!-- File: book.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Here</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Quick styling for centering */
+    .container {
+      max-width: 500px;        /* limit width so it’s not too wide */
+      margin: 50px auto;       /* center horizontally, add space on top/bottom */
+      text-align: center;      /* center the headings/paragraphs */
+    }
+    
+    .booking-form {
+      display: flex;           /* so we can manage each field vertically */
+      flex-direction: column;
+      align-items: stretch;    /* full width for inputs */
+      margin-top: 20px;        /* space above the form */
+      text-align: left;        /* left-align labels/fields within the form */
+    }
+
+    .booking-form label {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .booking-form input[type="text"],
+    .booking-form input[type="email"],
+    .booking-form input[type="date"],
+    .booking-form input[type="time"],
+    .booking-form textarea {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      padding: 8px;
+      font-size: 1rem;
+    }
+
+    .booking-form button {
+      align-self: center;      /* center the button within the form */
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #f0c0cb;  /* optional pink color to match your theme */
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+    }
+    
+    .booking-form button:hover {
+      background-color: #e699a8;  /* darker pink on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Book Your Appointment</h1>
+    <p>Please fill out the form below to request an appointment.</p>
+
+    <!-- Single form for Formspree -->
+    <form
+      action="https://formspree.io/f/movvjdnd"
+      method="POST"
+      class="booking-form"
+    >
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="date">Requesting Appointment Date</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="time">Requesting Appointment Time</label>
+      <input type="time" id="time" name="time" required />
+
+      <label for="message">Style Details</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        placeholder="e.g. Which style you want, special requests..."
+      ></textarea>
+
+      <!-- (Optional) If you want a custom Thank You page after submission -->
+      <!-- <input type="hidden" name="_next" value="https://YOURDOMAIN.com/thankyou.html" /> -->
+
+      <button type="submit">Book Appointment</button>
+    </form>
+  </div>
+</body>
+</html>

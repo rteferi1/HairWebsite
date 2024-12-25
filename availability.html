@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Availability</title>
+  <link rel="stylesheet" href="style.css"> <!-- Make sure this points to your CSS -->
+  <style>
+    /* You can put your styles in style.css instead;
+       inline here just for demonstration */
+
+    table {
+      width: 80%; 
+      margin: 50px auto; 
+      border-collapse: collapse;
+      background-color: #fff;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 15px;
+      text-align: center;
+    }
+    thead {
+      background-color: #f0c0cb; /* Light pink, for instance */
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    caption {
+      font-size: 1.5em;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <!-- Your navbar code -->
+  </nav>
+
+  <div class="centered-menu" id="centered-menu">
+    <!-- Your links (Services, Availability, Book) -->
+  </div>
+
+  <main>
+    <table>
+      <caption>Weekly Availability</caption>
+      <thead>
+        <tr>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+          <th>Sunday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- Fill in your availability times or notes for each day -->
+          <td>2:00 PM - 8:00 PM</td>
+          <td>9:00 AM - 3:00 PM</td>
+          <td>Off</td>
+          <td>12:00 PM - 7:00 PM</td>
+          <td>9:00 AM - 3:00 PM</td>
+          <td>10:00 AM - 4:00 PM</td>
+          <td>Off</td>
+        </tr>
+        <!-- You can add more rows if you want to list morning/evening availability separately -->
+      </tbody>
+    </table>
+  </main>
+
+  <script>
+    /* Your script for toggling the menu, if needed */
+  </script>
+</body>
+</html>
